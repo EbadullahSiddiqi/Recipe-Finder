@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import Home2 from "./Components/Home2";
+// import Home2 from "./Components/Home2";
+import Finder from "./Components/Finder";
 
 function App() {
 
@@ -9,7 +9,12 @@ function App() {
     <>
       <Navbar/>    
       <div className="flex justify-center align-center">
-      <Home/>
+      {/* <Home2/> */}
+      </div>
+
+
+      <div className="w-full flex justify-center items-center">
+      <Finder/>
       </div>
     </>
   )
