@@ -8,7 +8,7 @@ export default function Home2() {
         <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
           <div className="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center gap-5">
             <h1 className="text-5xl font-bold mb-4">
-              Discover delicious
+              Discover delicious <br/>
               <span className="text-yellow-900">
                 recipes <br />
               </span>
@@ -17,7 +17,7 @@ export default function Home2() {
 
             <div className="flex justify-center">
               <Link
-                to="/"
+                to="/finder"
                 className="inline-flex text-white bg-yellow-900 border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg"
               >
                 Finder
