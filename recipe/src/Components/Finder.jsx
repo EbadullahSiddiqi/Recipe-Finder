@@ -22,6 +22,9 @@ export default function Finder() {
     <div className="flex flex-col gap-5 justify-center items-center h-screen w-screen">
       {!recipe ? (
         <>
+            <h1 className="font-2xl text-gray-100"> Search your <span className="text-yellow-600">
+                Recipes 
+              </span></h1>
           <label className="flex">
             <input
               onChange={handleChange}
@@ -34,17 +37,25 @@ export default function Finder() {
           <label>
             <button
               onClick={() => fetchAPI(meal)}
-              className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-150"
+              className="px-6 py-3 bg-yellow-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-150"
             >
-              Click Me
+              Find
             </button>
           </label>
         </>
       ) : (
-        <RecipeCard
-          dish={recipe.strMeal}
-          instructions={recipe.strInstructions}
-        />
+        <>
+          <RecipeCard
+            dish={recipe.strMeal}
+            instructions={recipe.strInstructions}
+          />
+          <button
+            onClick={() => setRecipe(null)}
+            className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-150"
+          >
+            Go Back
+          </button>
+        </>
       )}
     </div>
   );
